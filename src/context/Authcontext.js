@@ -15,9 +15,12 @@ export function AuthProvider({children}) {
     const logOut = (email, password)=>{
         return auth.signOut() ;
     }
+    
     const sendEmail = (email)=>{  // for Forgot password
         return auth.sendPasswordResetEmail(email) ;
     }
+
+     
     useEffect(()=>{
         const unsub = auth.onAuthStateChanged((user)=>{
             setUser(user) ;

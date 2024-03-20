@@ -9,12 +9,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD1lZjc-FLGrgRvyPdIli9pcuWovtv3q0c",
-  authDomain: "my-reels-app-749fc.firebaseapp.com",
-  projectId: "my-reels-app-749fc",
-  storageBucket: "my-reels-app-749fc.appspot.com",
-  messagingSenderId: "735914057994",
-  appId: "1:735914057994:web:af7a078a10dcf3c73a1af3"
+  apiKey: "AIzaSyAtkYYLJPipwMY9t5hF3wuHDG4tCC9hF7A",
+  authDomain: "instagram-reels-app-70e65.firebaseapp.com",
+  projectId: "instagram-reels-app-70e65",
+  storageBucket: "instagram-reels-app-70e65.appspot.com",
+  messagingSenderId: "416737627012",
+  appId: "1:416737627012:web:5d54c7449d4a08ed8a2bd1"
 };
 
 // Initialize Firebase

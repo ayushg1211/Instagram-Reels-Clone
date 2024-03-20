@@ -1,12 +1,15 @@
 .loginWrapper{
     display: flex;
     justify-content: center;
+    column-gap: 2rem;
 }
 .loginCard{
-    width: 27vw ;
+    width: 27% ;
     background-color: white;
     margin-top: 10% ;
     height: fit-content;
+    /* padding: 1rem; */
+    min-width: 335px;
 }
 .insta-logo{
    display: flex;
@@ -31,4 +34,53 @@
     position: absolute;
     left : 143px ;
     top : 93px ;
+}
+
+@media screen and (max-width:900px) {
+
+    .loginWrapper{
+        height: 100%;
+        align-items: center;
+        padding-right: 2%;
+        column-gap: 0rem;
+    }
+
+    /* .imgCard{
+        margin-top: 8vh;
+        width: 441px;
+        height: 590px;
+        position: relative;
+    } */
+
+    .loginCard{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .loginWrapper{
+        height: 100vh;
+        align-items: center;
+    }
+
+    .imgCard{
+        /* margin-top: 8vh;
+        width: 441px;
+        height: 590px;
+        position: relative; */
+        display: none;
+    }
+
+    .loginCard{
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .loginCard{
+        width: 70%;
+        min-width: 300px;
+    }
 }

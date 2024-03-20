@@ -73,7 +73,7 @@ export default function Navbar({userData}) {
   }
 
   const handleExplore = () => {
-    let win =window.open('https://www.pepcoding.com','_blank');
+    let win =window.open('https://www.linkedin.com/in/ayushgoel12/','_blank');
     win.focus();
 }
 

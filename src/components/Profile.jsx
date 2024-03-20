@@ -69,7 +69,7 @@ function Profile() {
                 <img src={userData.profileUrl} alt="" />
               </div>
               <div className="info">
-                <Typography variant='h5'>
+                <Typography variant='h5' className='infoText'>
                   Email : {userData.email} 
                 </Typography>
                 <Typography variant='h6'>
