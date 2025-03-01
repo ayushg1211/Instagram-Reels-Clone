@@ -1,60 +1,3 @@
-// import React, {useState} from 'react'
-// import {auth} from "../firebase"
-// function Login() {
-//   let [email, setEmail] = useState("") ;
-//   let [password, setPassword] = useState("") ;
-//   let [user, setUser] = useState(null) ;
-//   let [loader, setLoader] = useState(false) ;
-//   let [error, setError] = useState("") ;
-
-//   // const printDetails = () => {
-//   //   alert(email + "  " + password) ;
-//   // }
-
-//   let signIn = async()=>{
-//     try{
-//       setLoader(true);
-//       let userCred = await auth.signInWithEmailAndPassword(email,password)
-//       console.log(userCred.user)
-//       setUser(userCred.user)
-//     }
-//     catch(err){
-//       setError(err.message);
-//       setTimeout(()=>{
-//           setError("")
-//       },2000)
-//     }
-//     setLoader(false);
-//   }
-
-//   // logout
-//   let logOut = async()=>{
-//         await auth.signOut() ;  // inbuit Asynchronus function in 'auth' for signOut.
-//         setUser(null) ;
-//         setPassword("") ;
-//         console.log("UserloggedOut");
-//   }
-//   return (
-//     <>
-//     {
-//       error != "" ? <h1>Error is {error}</h1>:
-//       loader == true?<h1>...Loading</h1>:
-//       user != null ? <><h1>User is {user.uid}</h1> <button onClick={logOut}>Log out</button></>:
-//       <>
-//         <input type="email" placeholder='Email' value={email} onChange={(e)=> setEmail(e.target.value)}/>
-//         <br></br>
-//         <input type="password" placeholder='Password' value={password} onChange={(e)=> setPassword(e.target.value)} />
-//         <br></br>
-//         <button type="click" onClick={signIn}>Login</button>
-//         <button onClick={logOut}>Log out</button>
-//       </>
-//     }
-//     </>
-//   )
-// }
-
-// export default Login
-
 import * as React from 'react';
 import { useContext } from 'react';
 import Card from '@mui/material/Card';
@@ -83,10 +26,9 @@ import {Link as RouterLink} from  'react-router-dom';
 
 
 
-
 export default function Login() {
   const store = useContext(AuthContext)
-  console.log(store) ;
+  // console.log(store) ;
   const useStyles = makeStyles()({
     text1:{
         color:'grey',

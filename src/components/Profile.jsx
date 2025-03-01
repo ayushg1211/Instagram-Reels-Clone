@@ -42,23 +42,25 @@ function Profile() {
     
       if(userData != null){
         let parr = []
-        // console.log(userData) ;
+        // console.log(userData?.postIds) ;
+        if(userData?.postIds){
         for(let i=0;i<userData.postIds.length;i++){
           let postData = await database.posts.doc(userData.postIds[i]).get()
           parr.push({...postData.data(), postId:postData.id})
         }
         setPosts(parr)
+      }
+        
         // console.log(parr) ;
       }
     }
-    funcn() ;
-    
+    funcn() ; 
   })
   
   return (
     <>
       {
-        posts==null || userData==null ? <CircularProgress/> : 
+        userData==null ? <CircularProgress/> : 
         <>
           {/* {console.log(userData)} */}
           <Navbar userData={userData}/>
@@ -73,13 +75,13 @@ function Profile() {
                   Email : {userData.email} 
                 </Typography>
                 <Typography variant='h6'>
-                  Posts : {userData.postIds.length} 
+                  Posts : {userData?.postIds?.length || 0} 
                 </Typography>
               </div>
             </div>
             <hr style={{marginTop:'3rem', marginBottom:'3rem'}}/>
             <div className="profile-videos">
-                {
+                { posts==null ? "" : 
                     posts.map((post, index)=>(
                         <React.Fragment key={index}>
                             <div className="videos">
@@ -100,8 +102,8 @@ function Profile() {
                                             <source src={post.pUrl}/>
                                         </video>
                                     </div>
-                                    <div className="comment-modal">
-                                        <Card className='card1' style={{padding:'1rem'}}>
+                                    <div className="comment-modal" style={{position:'relative'}}>
+                                        <Card className='card1' style={{padding:'1rem', maxHeight: '500px', overflowY:"scroll"}}>
                                             <Comments postData={post}/>
                                         </Card>
 

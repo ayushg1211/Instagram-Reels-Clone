@@ -18,15 +18,15 @@ function Comments({postData}) {
 
     },[postData])
     return (
-        <div>
+        <div style={{display:"flex", flexDirection:"column-reverse", alignItems:"flex-start"}}>
             {
                 comments==null? <CircularProgress/> :
                 <>
                 {
                     comments.map((comment,index)=>(
-                        <div style={{display:'flex'}}>
-                            <Avatar  src={comment.uProfileImage}/>
-                            <p>&nbsp;&nbsp;<span style={{fontWeight:'bold'}}>{comment.uName}</span>&nbsp;&nbsp; {comment.text}</p>
+                        <div key={index} style={{display:'flex', alignItems:"start"}}>
+                            <Avatar  src={comment.uProfileImage} style={{marginTop:"6px"}}/>
+                            <p style={{marginLeft:".5rem", fontSize:"14px"}}><span style={{fontWeight:'bold', fontSize:"14px"}}>{comment.uName}</span>&nbsp;&nbsp; {comment.text}</p>
                         </div>
                     ))
                 }

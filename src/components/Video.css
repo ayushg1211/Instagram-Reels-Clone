@@ -1,5 +1,18 @@
 .videos-styling{
     width: 100%;
-    height: 80vh;
+    height: 78vh;
+    border-radius: 15px;
     scroll-snap-align: start;
+}
+
+@media screen and (max-width: 769px) {
+    .videos-styling{
+        height: 74vh;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .videos-styling{
+        height: 70vh;
+    }
 }

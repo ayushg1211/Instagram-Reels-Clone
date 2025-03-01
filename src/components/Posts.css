@@ -1,6 +1,6 @@
 .video-container{
-    height: 80vh;
-    border-radius: 20px;
+    height: 78vh;
+    /* border-radius: 20px; */
     background-color: white;
     overflow: scroll;  /* Moving scroll to posts. For overflow no. of posts */
     scroll-snap-type: y mandatory; 
@@ -13,6 +13,7 @@
 
 .videos{
     position: relative;
+    border-radius: 15px;
 }
 .fa{
     position: absolute;
@@ -57,7 +58,7 @@
 
 .video-modal{
     width : 50% ;
-    height : 100% ;
+    /* height : 100% ; */
     display : flex ;
     align-items: center;
     justify-content: center;
@@ -65,6 +66,7 @@
 
 .video-modal video{
     height : 85vh ;
+    border-radius: 15px;
 }
 
 .comment-modal{
@@ -77,6 +79,79 @@
     cursor: pointer ;
 }
 
-.card1{
+.card1 {
+    overflow-y: auto;
     height: 70vh;
+    max-height: 500px;
+  }
+  
+  .card1::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .card1::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .card1::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+@media screen and (max-width:768px) {
+    .video-container{
+        height: 74vh;
+    }
+
+    .modal-container{
+        display : flex ;
+        flex-direction: column;
+        align-items: center;
+        height : 80vh ;
+        width : 100% ;
+    }
+
+    .video-modal{
+        display: none;
+        /* width : 100% ;
+        height : 40% ;
+        display : flex ;
+        align-items: center;
+        justify-content: center; */
+    }
+
+    /* .video-modal video{
+        height : 100% ;
+    } */
+    
+    .comment-modal{
+        width : 100% ;
+        height : 40% ;
+        position: relative;
+    }
+}
+
+@media screen and (max-width:426px) {
+    .video-container{
+        height: 70vh;
+    }
+
+    .fa{
+        position: absolute;
+        bottom : 6.5% ;
+        left : 5% ;
+    }
+
+    .icon-styling{
+        position: absolute;
+        bottom: 2%;
+        left: 6%;
+    }
+
+    .chat-styling{
+        color : white ;
+        position: absolute;
+        bottom: 2%;
+        left: 19%;
+    }
 }

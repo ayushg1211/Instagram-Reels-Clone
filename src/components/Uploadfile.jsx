@@ -34,7 +34,7 @@ function Uploadfile(props) { // 'props' is userData obj added to "UploadFile" co
         // ye progress ko dekhega
         function fn1(snapshot){
             let progress = (snapshot.bytesTransferred / snapshot.totalBytes)*100;
-            console.log(`Upload is ${progress} done.`)
+            // console.log(`Upload is ${progress} done.`)
         }
         // ye error ko dekhega
         function fn2(error){
@@ -48,7 +48,7 @@ function Uploadfile(props) { // 'props' is userData obj added to "UploadFile" co
         // ye success dekhega
         function fn3(){
             uploadTask.snapshot.ref.getDownloadURL().then((url)=>{
-                console.log(url);
+                // console.log(url);
                 let obj = {
                     likes : [],
                     comments : [],

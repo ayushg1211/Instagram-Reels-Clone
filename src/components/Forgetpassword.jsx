@@ -21,7 +21,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Forgetpassword() {
   const store = useContext(AuthContext)  // from context
-  console.log(store) ;
+  // console.log(store) ;
   const useStyles = makeStyles()({
     text1:{
         color:'grey',

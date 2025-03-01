@@ -100,12 +100,12 @@ function Posts({userData}) {
                                             <source src={post.pUrl}/>
                                         </video>
                                     </div>
-                                    <div className="comment-modal">
-                                        <Card className='card1' style={{padding:'1rem'}}>
+                                    <div className="comment-modal" style={{position:'relative'}}>
+                                        <Card className='card1' style={{padding:'1rem', maxHeight: '500px', overflowY:"scroll"}}>
                                             <Comments postData={post}/>
                                         </Card>
 
-                                        <Card variant='outlined' className="card2">
+                                        <Card variant='outlined' className="card2" style={{position:'sticky', bottom:"0"}}>
                                             <Typography style={{padding:'0.4rem'}}> 
                                                 {post.likes.length == 0 ? "" : `Liked by ${post.likes.length} users`}
                                             </Typography>

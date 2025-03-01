@@ -57,7 +57,7 @@ const handleClick = async()=>{
     uploadTask.on('state_changed',fn1,fn2,fn3);
     function fn1(snapshot){
         let progress = (snapshot.bytesTransferred / snapshot.totalBytes)*100;
-        console.log(`Upload is ${progress} done.`)
+        // console.log(`Upload is ${progress} done.`)
     }
     function fn2(error){
         setError(error);
@@ -69,7 +69,7 @@ const handleClick = async()=>{
     }
     function fn3(){
         uploadTask.snapshot.ref.getDownloadURL().then((url)=>{
-            console.log(url);
+            // console.log(url);
             database.users.doc(uid).set({
                 email:email,
                 userId:uid,
